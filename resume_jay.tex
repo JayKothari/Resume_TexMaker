@@ -1,0 +1,198 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{hyperref}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Jay Kothari}}\\
+	Pune $\cdot$ \url{jaikothari10@gmail.com} $\cdot$ (+91) 9428698017 $\cdot$ \url{https://jaykothari.github.io/}\\
+\end{center}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Wipro (\url{https://www.wipro.com/})} \hfill Pune, Maharashtra, India\\
+\textit{Senior Software Engineer} \hfill March 2021 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Telematics-platform bringup and operating system services
+\end{itemize}
+
+\textbf{Visteon Corporation (\url{https://www.visteon.com/)}} \hfill Pune, Maharashtra, India\\
+\textit{Embedded software engineer} \hfill July 2019 - Feb 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Smart core is single ECU that combines instrument cluster, a head-up display (HUD) and Visteon’s infotainment platform into a single domain controller. Worked on Smart core platform bringup. 
+\end{itemize}
+
+\textbf{Matrix Comsec (\url{https://www.matrixcomsec.com/}} \hfill Vadodara, Gujarat, India\\
+\textit{Senior Software Engineer} \hfill Sep 2015 - July 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Network video recorders(NVR) are product to record a video stream from CCTV camera over Ethernet. Design and development NVR.
+\end{itemize}
+
+\textbf{SLTIET (\url{https://www.sltiet.edu.in/})} \hfill Rajkot, Gujarat, India\\
+\textit{ad-hoc Lecturer EC department} \hfill June 2012 - June-2013 \\
+\vspace{2mm}
+
+%==== Education ====%
+\header{Education}
+\textbf{GTU PG School (Gujarat Technological University(GTU), Ahmadabad, Gujarat)}\\
+M.E. VLSI \& Embedded Systems \textit{GPA: 8.1} \hfill June-2013 - June-2015\\
+\vspace{2mm}
+\textbf{Atmiya (\url{https://atmiyauni.ac.in/} , Gujarat Technological University(GTU))}\\
+B.E. Electronics and Communication Engineering \textit{GPA: 8.2} \hfill June-2008 - June-2012\\
+\vspace{2mm}
+
+%==== Skills ====%
+\header{Skills}
+\begin{tabular}{ l l }
+	Language:        & c, c++                                                                             \\
+	OS:              & Good understanding of operating system implementations.                            \\
+	Linux:           & Linux System Programming., Linux Kernel Programming, Linux Kernel Debugging skill. \\
+	Multi-Threading: & Multi-Threaded application design and development.                                 \\
+	RTOS:            & Worked with Xenomai Real Time driver development(RTDM).                            \\
+	QNX:			  & Worked on QNX. \\
+	git:             & Understanding of software development workflow                                     \\
+	Embedded linux:  & Porting Linux on custom boards. Experience with Yocto                              \\
+	Video streaming: & Streaming Video/Audio over RTP using control Protocol RTSP. Raw TCP streaming.     \\
+\end{tabular}
+\vspace{2mm}
+
+\header{Projects}
+{\textbf{Telematics-platform}} {\sl c/c++/yocto/embedded linux/git} \\
+Platform: Quectel module(AG35) and renesas rh850, Its a telematics control unit(TCU) for which our team is responsible for BSP.\\ 
+\begin{itemize} \itemsep 0.5pt
+\item Write Persistence Manager using sqlite3 database.
+\item Design and develop loader for micro-controller.
+\end{itemize}
+\vspace*{2mm}
+
+{\textbf{Smart Core.}} {\sl c/andriod linux kernel/git/hypervisor/QNX} \\ 
+URL : \url{https://www.visteon.com/newsroom/delivering-digital-integrated-cockpit-solution-smartcore/} \\
+\vspace*{1mm}
+Platform : Qualcomm 6155/6145 processor. Quectel module and renesas rh850 on single platform.\\
+OS:QNX as type-2 hypervisor and Android running as guest OS. \\ Worked in OS/BSP team for porting and bringing up peripherals. \\
+\begin{itemize} \itemsep 0.5pt
+\item Bring-up UART and i2c peripherals(like temperature sensor).
+\item Bring-up TFT display. 
+\item Bring-up touch panel.
+\item Early display bring-up in QNX.
+\item Manage various product variant on the singe code base.
+\item Integrate the Qualcomm SDK versions.
+\end{itemize}
+\vspace*{2mm}
+
+{\textbf{Network Video Recorder}} {\sl c/c++/linux system programming/network programming/} \\
+URL : \url{https://www.matrixvideosurveillance.com/network-video-recorder.html} \\
+\vspace*{1mm}
+Platform: HiSilicon 3536 processor(ARM Cortex A17) and TI DM8168(ARM Cortex A8). \\
+\begin{itemize} \itemsep 0.5pt
+\item Implementation of recording modules in Network Video Recorder Product.
+\item Implement RTSP Client and RTSP Server using a live555 library.
+\item Design and implement a Camera initiation module in product.
+\item Design and implement 4 synchronous playbacks
+\item Implement decode and display module for Hi3536 processor.
+\item Design and implement a hardware test application for product in Qt.
+\item Porting embedded Linux on HI3536 processor.
+\end{itemize}
+\vspace*{2mm}
+
+{\textbf{Implemenatation real time linux driver.}} {\sl c/linux device driver} \hfill \\ 
+Code : \url{https://github.com/JayKothari/i2c\_rtdm} \\ 
+Article : \url{https://www.opensourceforu.com/2015/10/the-xenomai-project-a-linux-based-rtos/}\\
+\vspace*{1mm}
+Platform : Beagle Bone Black with the Cortex A8 processor with 1GHz Frequency Code.\\
+Description : Design, Implement and Test of Xenomai Real Time drivers(RTDM) for the I2C and UART processor controller on Beagle Bone Black. This is was part of the Thesis in Master of engineering.\\
+\vspace*{2mm}
+
+%==== Personal Profile ====%
+\header{Personal Profile}
+\begin{tabular}{ l l }
+	Date of Birth:        & 4th Dec 1989                                  \\
+	Gender:              & Male.                            				\\
+	Language(s):           & English, Hindi and Gujarati. 					\\
+	Permanent Address: & 1/7 jairaj plot, Palace Road, Rajkot-360001,Gujarat,India.     \\
+	Nationality:            & INDIAN.                             			\\
+\end{tabular}
+\vspace*{2mm}
+
+%==== Declaration ====%
+\header{Declaration}
+I declare that the above information furnished by me is true to the best of my knowledge and will
+present an original document whenever asked for.
+\vspace*{2mm}
+
+\ 
+\end{document}
