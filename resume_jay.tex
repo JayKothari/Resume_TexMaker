@@ -10,7 +10,7 @@
     \pagestyle{empty}
     \raggedright
 
-    %\renewcommand{\encodingdefault}{cg}
+ %\renewcommand{\encodingdefault}{cg}
 %\renewcommand{\rmdefault}{lgrcmr}
 
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
@@ -80,15 +80,23 @@
 %==== Summary ====%
 \header{Summary}
 \vspace{1mm}
-Profesional is holding Master in engineering with specialization in Embedded system, having work experience of 7 years.
+Profesional is holding Master in engineering with specialization in Embedded system, having work experience of 10 years.
 \vspace{2mm}
 
 %==== Experience ====%
 \header{Experience}
 \vspace{1mm}
 
+\textbf{Incedo (\url{https://www.incedoinc.com})} \hfill Pune, Maharashtra, India\\
+\textit{Senior Technical Lead} \hfill Oct 2022 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Incedo is product development partner with \url{https://www.a10networks.com/products/}. Working in system platform development team. Main responsibility of team is to work on : 
+	ACOS \url{https://www.a10networks.com/solutions/advanced-core-operating-system/}.
+\end{itemize}
+
 \textbf{Wipro (\url{https://www.wipro.com/})} \hfill Pune, Maharashtra, India\\
-\textit{Senior Software Engineer} \hfill March 2021 - Present\\
+\textit{Senior Software Engineer} \hfill March 2021 - Oct 2022\\
 \vspace{-1mm}
 \begin{itemize} \itemsep 1pt
 	\item Telematics-platform bringup and operating system services
@@ -132,12 +140,27 @@ B.E. Electronics and Communication Engineering \textit{GPA: 8.2} \hfill June-200
 	QNX:			  & Worked on QNX. 																		 \\
 	git:             & Understanding of software development workflow                                     \\
 	Embedded linux:  & Porting Linux on custom boards. Experience with Yocto                              \\
-	ARM:			 & Worked on ARMv7 architecture 														 \\
+	ARM:			 & Worked on ARMv7/ARMv8 architecture 														 \\
 	Video streaming: & Streaming Video/Audio over RTP using control Protocol RTSP. Raw TCP streaming.     \\
+	DPDK: & Hands on experience with DPDK development and maintenance \\
 \end{tabular}
 \vspace{2mm}
 
 \header{Projects}
+{\textbf{ System platform team at Incedo/A10 networks }} {\sl c/dpdk/linux/git} \\
+\begin{itemize} \itemsep 0.5pt
+	\item New hardware platform bringup and implementation of sensor monitoring(using open ipmi), watchdog, LED control, eeprom. Communication over I2C,IPMI(create raw ipmi library).
+	\item Responsible for DPDK maintenance and problem solving.
+	\item Implementation of Link time optimization across the ACOS.
+	\item ARM based platform from Ampere in ACOS. Bringup on platform like vThunder and containers.
+	\item Write a Huge page-based memory allocator for ACOS.
+	\item RHEL 9 support for ACOS.
+	\item Support for high range of CPUs on ACOS. Changes requires in middle-ware. 
+	\item Maintenance of various platform images generation.
+	\item Bugs solving and maintenance of middle-ware.
+\end{itemize}
+\vspace*{2mm}
+
 {\textbf{Telematics-platform}} {\sl c/c++/yocto/embedded linux/git} \\
 Platform: Quectel SOC(AG35) and renesas rh850, Its a telematics control unit(TCU) for which our team is responsible for BSP and operating system services.\\ 
 \begin{itemize} \itemsep 0.5pt
