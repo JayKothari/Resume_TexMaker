@@ -1,0 +1,228 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{hyperref}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Jay Kothari}}\\
+	\vspace{2pt}
+	Pune $\cdot$ \href{mailto:jaikothari10@gmail.com}{jaikothari10@gmail.com} $\cdot$ (+91) 9428698017 $\cdot$ \href{https://jaykothari.github.io/}{jaykothari.github.io}\\
+\end{center}
+
+%==== Summary ====%
+\header{Summary}
+\vspace{1mm}
+Embedded Systems Engineer with a Master's degree in Engineering (specialization: Embedded Systems) with 11 years of work experience.
+\vspace{2mm}
+
+%==== Skills ====%
+\header{Skills}
+\begin{tabular}{ l l }
+	Languages:       & C, C++                                                                             \\
+	OS:              & Deep understanding of operating system internals and implementation.               \\
+	Linux:           & Linux System Programming, Linux Kernel Programming, Linux Kernel Debugging.        \\
+	Multi-Threading: & Multi-threaded application design and development.                                 \\
+	RTOS:            & Real-time driver development with Xenomai (RTDM).                                  \\
+	QNX:			  & Hands-on experience with QNX RTOS and type-2 hypervisor.						 \\
+	DPDK:            & Hands-on experience with DPDK development and maintenance.                         \\
+	Embedded Linux:  & Porting Linux on custom boards; experience with Yocto build system.                \\
+	ARM:             & Worked on ARMv7/ARMv8 architecture.                                                \\
+	Video Streaming: & Streaming Video/Audio over RTP/RTSP; raw TCP streaming.                            \\
+	Tools:           & Git, Bootchartd, OpenIPMI, SQLite3, Qt, Live555.                                   \\
+\end{tabular}
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{\href{https://www.incedoinc.com}{Incedo}} \hfill Pune, Maharashtra, India\\
+\textit{Senior Technical Lead} \hfill Oct 2022 -- Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Incedo is a product development partner with \href{https://www.a10networks.com/products/}{A10 Networks}. Working in the system platform development team responsible for \href{https://www.a10networks.com/solutions/advanced-core-operating-system/}{ACOS (Advanced Core Operating System)}.
+\end{itemize}
+
+\textbf{\href{https://www.wipro.com/}{Wipro}} \hfill Pune, Maharashtra, India\\
+\textit{Senior Software Engineer} \hfill March 2021 -- Oct 2022\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Telematics-platform bring-up and operating system services.
+\end{itemize}
+
+\textbf{\href{https://www.visteon.com/}{Visteon Corporation}} \hfill Pune, Maharashtra, India\\
+\textit{Embedded Software Engineer} \hfill July 2019 -- Feb 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Smart Core is a single ECU that combines instrument cluster, head-up display (HUD), and Visteon's infotainment platform into a single domain controller. Worked on Smart Core platform bring-up.
+\end{itemize}
+
+\textbf{\href{https://www.matrixcomsec.com/}{Matrix Comsec}} \hfill Vadodara, Gujarat, India\\
+\textit{Senior Software Engineer} \hfill Sep 2015 -- July 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Designed and developed Network Video Recorders(NVR) product core module.
+\end{itemize}
+
+\textbf{\href{https://www.sltiet.edu.in/}{SLTIET}} \hfill Rajkot, Gujarat, India\\
+\textit{Ad-hoc Lecturer, EC Department} \hfill June 2012 -- June 2013\\
+\vspace{2mm}
+
+%==== Projects ====%
+\header{Projects}
+{\textbf{System Platform Team at Incedo / A10 Networks}} {\sl C, DPDK, Linux, Git} \\
+\begin{itemize} \itemsep 0.5pt
+	\item New hardware platform bring-up and implementation of sensor monitoring (using OpenIPMI), watchdog, LED control, EEPROM; communication over I2C and IPMI (created raw IPMI library), getting information over the i2c for PSU.
+	\item Userspace driver to communicate with proprietary FPGA hardware and communicate with SFP ports via i2c controller on FPGA. 
+	\item Implemented a user space driver for the SIO (Super I/O) chip using direct port I/O (iopl/inb/outb), enabling hardware monitoring and control (temperature, FAN speed, voltage, watchdog)
+	\item Responsible for DPDK maintenance and problem solving.
+	\item Implementation of Link Time Optimization (LTO) across ACOS.
+	\item ARM-based platform from Ampere in ACOS; bring-up on vThunder and container environments.
+	\item Designed a huge-page-based memory allocator for ACOS.
+	\item RHEL 9 support for ACOS.
+	\item Support for a high range of CPUs on ACOS; changes required in middleware.
+	\item Maintenance of various platform image generation pipelines.
+	\item Bug fixing and maintenance of middleware components.
+\end{itemize}
+\vspace*{2mm}
+
+{\textbf{Telematics Platform}} {\sl C, C++, Yocto, Embedded Linux, Git} \\
+Platform: Quectel SoC (AG35) and Renesas RH850 — a Telematics Control Unit (TCU) for which the team is responsible for BSP and OS services.\\
+\begin{itemize} \itemsep 0.5pt
+\item Designed and developed a Persistence Manager using SQLite3 (client-server model).
+\item GPIO driver development for the Linux kernel.
+\item Implementation of low-power mode; handling synchronization between Vehicle Controller (VC) and SoC for service watcher mode, RTC sleep, superlock mode, and update mode.
+\item Defect resolution and product stabilization; analyzed and optimized boot time using Bootchartd.
+\end{itemize}
+\vspace*{2mm}
+
+{\textbf{Smart Core}} {\sl C, Android Linux Kernel, Git, Hypervisor, QNX} \\
+URL: \href{https://www.visteon.com/newsroom/delivering-digital-integrated-cockpit-solution-smartcore/}{visteon.com -- SmartCore Cockpit Solution}\\
+\vspace*{1mm}
+Platform: Qualcomm SA6155/SA6145; Quectel module and Renesas RH850 on a single platform.\\
+OS: QNX as type-2 hypervisor with Android as guest OS. Worked in OS/BSP team for porting and peripheral bring-up.\\
+\begin{itemize} \itemsep 0.5pt
+\item Bring-up of UART and I2C peripherals (e.g., temperature sensor).
+\item Bring-up of TFT display and touch panel.
+\item Early display bring-up in QNX.
+\item Managed multiple product variants on a single codebase.
+\item Integrated Qualcomm SDK versions.
+\end{itemize}
+\vspace*{2mm}
+
+{\textbf{Network Video Recorder}} {\sl C, C++, Linux System Programming, Network Programming} \\
+URL: \href{https://www.matrixvideosurveillance.com/network-video-recorder.html}{matrixvideosurveillance.com -- NVR}\\
+\vspace*{1mm}
+Platform: HiSilicon Hi3536 (ARM Cortex-A17) and TI DM8168 (ARM Cortex-A8).\\
+\begin{itemize} \itemsep 0.5pt
+\item Implementation of recording modules in the NVR product.
+\item Implemented RTSP Client and RTSP Server using the Live555 library.
+\item Designed and implemented the camera initiation module.
+\item Designed and implemented 4-channel synchronous playback.
+\item Implemented decode and display module for Hi3536 processor.
+\item Designed and implemented a hardware test application in Qt.
+\item Ported embedded Linux on the Hi3536 processor.
+\end{itemize}
+\vspace*{2mm}
+
+{\textbf{Real-Time Linux Driver (Xenomai RTDM)}} {\sl C, Linux Device Drivers} \\
+Code: \href{https://github.com/JayKothari/i2c_rtdm}{github.com/JayKothari/i2c\_rtdm} \\
+Article: \href{https://www.opensourceforu.com/2015/10/the-xenomai-project-a-linux-based-rtos/}{opensourceforu.com -- The Xenomai Project}\\
+\vspace*{1mm}
+Platform: BeagleBone Black with Cortex-A8 processor at 1 GHz.\\
+Description: Design, implementation, and testing of Xenomai Real-Time drivers (RTDM) for I2C and UART controller on BeagleBone Black. This was the thesis project for the Master of Engineering degree.\\
+\vspace*{2mm}
+
+%==== Education ====%
+\header{Education}
+\textbf{GTU PG School} (Gujarat Technological University, Ahmedabad, Gujarat)\\
+M.E. -- VLSI \& Embedded Systems \hfill \textit{GPA: 8.1 / 10} \hfill June 2013 -- June 2015\\
+\vspace{2mm}
+\textbf{\href{https://atmiyauni.ac.in/}{Atmiya University}} (Gujarat Technological University)\\
+B.E. -- Electronics and Communication Engineering \hfill \textit{GPA: 8.2 / 10} \hfill June 2008 -- June 2012\\
+\vspace{2mm}
+
+%==== Personal Profile ====%
+\header{Personal Profile}
+\begin{tabular}{ l l }
+	Date of Birth:     & 4th December 1989                                          \\
+	Gender:            & Male                                                       \\
+	Languages:         & English, Hindi and Gujarati                                \\
+	Permanent Address: & 1/7 Jairaj Plot, Palace Road, Rajkot -- 360001, Gujarat, India \\
+	Nationality:       & Indian                                                     \\
+\end{tabular}
+\vspace*{2mm}
+
+%==== Declaration ====%
+\header{Declaration}
+I declare that the above information furnished by me is true to the best of my knowledge and I will present original documents whenever asked for.
+\vspace*{2mm}
+
+\ 
+\end{document}
